@@ -1,0 +1,8 @@
+<?php
+require_once __DIR__ . '/../includes/functions.php';
+
+unset($_SESSION['admin_id'], $_SESSION['admin_username']);
+session_regenerate_id(true);
+
+set_flash('success', 'Admin logged out successfully.');
+redirect('login.php');
